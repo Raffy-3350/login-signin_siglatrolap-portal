@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: box-sizing;
+}
+body {
+  font-family: sans-serif;
+  background-image: url("bg-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.logo-section {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  margin-left: 37%;
+}
+.logo-section img {
+  align-items: center;
+  width: 70%;
+  margin-top: 5rem;
+}
+
+/* Log In CSS */
+.form-login {
+  color: white;
+  position: absolute;
+  display: inline-block;
+  margin-left: 40%;
+  margin-top: 18%;
+  margin-right: 42%;
+}
+::placeholder {
+  color: white;
+}
+.form-login input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  color: white;
+  border: 1px solid rgb(0, 208, 255);
+  background: gray;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.forgot-password {
+  text-decoration: none;
+  color: white;
+  margin-left: 52%;
+}
+.forgot-password:hover {
+  color: rgb(0, 255, 0);
+}
+.form-button {
+  margin-top: 10px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+.form-button button {
+  padding: 12px;
+  border: 1px solid rgb(0, 208, 255);
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  background: black;
+  color: white;
+}
+.form-button button:hover {
+  background: rgb(0, 208, 255);
+  color: black;
+  border: 1px solid white;
+}
+.form-button p {
+  margin-left: 1.2rem;
+}
+.form-button a {
+  color: white;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 3px;
+}
+.form-button a:hover {
+  color: rgb(0, 255, 0);
+}
+
+.logo-sections {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  margin-left: 37%;
+}
+.logo-sections img {
+  align-items: center;
+  width: 70%;
+  margin-top: 2.8rem;
+}
+
+/* Sign Up CSS */
+
+.form-signup {
+  color: white;
+  position: absolute;
+  display: inline-block;
+  margin-left: 40%;
+  margin-top: 14%;
+  margin-right: 42%;
+}
+::placeholder {
+  color: white;
+}
+.form-signup input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  color: white;
+  border: 1px solid rgb(0, 162, 255);
+  background: gray;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.signup-button {
+  margin-top: 10px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+.signup-button button {
+  padding: 12px;
+  border: 1px solid rgb(0, 208, 255);
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  background: black;
+  color: white;
+}
+.signup-button button:hover {
+  background: rgba(0, 217, 255, 0.683);
+  color: black;
+  border: 1px solid white;
+}
+.signup-button p {
+  margin-left: 5%;
+}
+.signup-button a {
+  color: white;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 3px;
+}
+.signup-button a:hover {
+  color: rgb(0, 255, 0);
+}
+
+/* LANDING PAGE CSS */
+.navbar {
+  background: transparent;
+  margin-right: 3rem;
+  font-family: "Times New Roman", Times, serif;
+}
+.navbar a {
+  text-decoration: none;
+  color: white;
+}
+.navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.navbar li {
+  list-style: none;
+  display: inline-block;
+}
+.navbar li a {
+  float: left;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.navbar a:hover {
+  color: rgb(0, 255, 0);
+}
+.navbar a:active {
+  color: rgb(0, 187, 255);
+}
+
+.logo-left {
+  margin-left: 5rem;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+.logo-left img {
+  position: absolute;
+  width: 12%;
+  height: auto;
+}
+.land-text {
+  margin-top: 13%;
+  margin-left: 6%;
+  margin-right: 25%;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+}
+.land-text p {
+  font-size: 26px;
+  letter-spacing: 2px;
+}
+.land-text h1 {
+  letter-spacing: 3px;
+  font-size: 50px;
+}
+.one-name {
+  color: rgb(0, 255, 0);
+}
+.solo-one {
+  color: rgb(0, 255, 0);
+}
+.solo-two {
+  color: rgb(0, 187, 255);
+}
+.land-page-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  letter-spacing: 1px;
+  background: gray;
+  border: 2px solid rgb(0, 229, 255);
+  border-radius: 10px;
+}
+.land-text button:hover {
+  background: rgb(0, 255, 132);
+}
+.land-page-btn a {
+  text-decoration: none;
+  color: white;
+}
+.land-page-btn a:hover {
+  color: black;
+  font-weight: 600;
+}
