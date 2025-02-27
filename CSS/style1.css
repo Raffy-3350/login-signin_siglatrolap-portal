@@ -1,0 +1,105 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0a0a0a;
+    color: white;
+    padding: 20px;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    padding: 15px 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.nav-links a:hover {
+    color: #38ff8a;
+}
+
+.user-icon {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Task Panel (Left) */
+.task-panel {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.task-btn {
+    padding: 15px;
+    margin-bottom: 10px;
+    border: none;
+    background: gray;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.task-btn:hover {
+    background: #38ff8a;
+    color: black;
+}
+
+/* Grid Section (Right) */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 5px;
+    width: 60%;
+}
+
+.grid-item {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.grid-item:hover {
+    background: #38ff8a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .task-panel {
+        width: 90%;
+        text-align: center;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
+    }
+}
