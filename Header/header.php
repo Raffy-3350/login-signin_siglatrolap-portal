@@ -37,7 +37,7 @@ if ($con->connect_error) {
                   <li><a href="dashboard.php">DASHBOARD</a></li>
                   <li><a href="task.php">TASK</a></li>
                   <li><a href="#">MANAGE</a></li>
-                  <li><a href="#"><img src="#" alt="profile"></a></li>
+                 
             </ul>
       </nav>
 </body>
