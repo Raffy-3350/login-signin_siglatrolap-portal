@@ -74,13 +74,6 @@ $con->close();
             <img src="Logo.png" alt="Siglatrolap">
       </div>
       <nav class="navbar">
-            <ul>
-                  <li><a href="home.php">HOME</a></li>
-                  <li><a href="dashboard.php">DASHBOARD</a></li>
-                  <li><a href="task.php">TASK</a></li>
-                  <li><a href="#">MANAGE</a></li>
-                  <li><a href="#"><img src="#" alt="profile"></a></li>
-            </ul>
       </nav>
 
 <!-- Password Reset Form -->
