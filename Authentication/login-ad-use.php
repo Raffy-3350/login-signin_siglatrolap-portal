@@ -19,34 +19,40 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     $password = $_POST['password'] ?? '';
     $confirmPassword = $_POST['confirm_password'] ?? '';
 
+    // ✅ Validate empty fields
     if (empty($username) || empty($password) || empty($confirmPassword)) {
         $_SESSION['error'] = "All fields are required!";
         header("Location: login-ad-use.php"); // Redirect back to login page
         exit();
     }
 
-    // Check if passwords match
+    // ✅ Check if passwords match
     if (!confirmPassword($password, $confirmPassword)) {
         $_SESSION['error'] = "Passwords do not match!";
         header("Location: login-ad-use.php"); // Redirect back to login page
         exit();
     }
 
-    // Check user in database
-    $stmt = $con->prepare("SELECT id, password FROM users WHERE username = ?");
+    // ✅ Check user in database
+    $stmt = $con->prepare("SELECT id, full_name, password, role FROM users WHERE username = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $stmt->store_result();
 
     if ($stmt->num_rows > 0) {
-        $stmt->bind_result($id, $hashed_password);
+        $stmt->bind_result($id, $full_name, $hashed_password, $role);
         $stmt->fetch();
 
-        // Verify password
+        // ✅ Verify password
         if (password_verify($password, $hashed_password)) {
+            // ✅ Set Session Variables
             $_SESSION["user_id"] = $id;
+            $_SESSION["full_name"] = $full_name;
             $_SESSION["username"] = $username;
-            header("Location: home.php"); // Redirect to dashboard
+            $_SESSION["role"] = $role; // Store the role
+
+            // ✅ Redirect to dashboard after login
+            header("Location: home.php");
             exit();
         } else {
             $_SESSION['error'] = "Incorrect password!";
@@ -61,6 +67,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     exit();
 }
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">

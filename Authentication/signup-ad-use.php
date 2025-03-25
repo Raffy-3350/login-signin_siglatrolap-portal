@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register'])) {
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         echo '<p style="color: red;">Invalid email format!</p>';
     } elseif (strlen($password) > 8) {
-        echo '<p style="color: red; position: absolute; margin-left: 45.3%; margin-top: 29%;">Must at least 8 characters!</p>';
+        echo '<p style="color: red; position: absolute; margin-left: 45.3%; margin-top: 30%;">Must at least 8 characters!</p>';
     } else {
         // Hash password
         $hashed_password = password_hash($password, PASSWORD_BCRYPT);
@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register'])) {
                 $stmt->close();
 
                 // Insert new user
-                $stmt = $con->prepare("INSERT INTO users (name, username, password, email) VALUES (?, ?, ?, ?)");
+                $stmt = $con->prepare("INSERT INTO users (full_name, username, password, email) VALUES (?, ?, ?, ?)");
                 $stmt->bind_param("ssss", $name, $username, $hashed_password, $email);
 
                 if ($stmt->execute()) {
@@ -93,13 +93,13 @@ $con->close();
             <form action="signup-ad-use.php" method="POST">
                   <div>
                         <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" placeholder="Name..." autocomplete="off" >
+                        <input type="text" id="name" name="name" placeholder="Name..." >
                         <label for="username">Email:</label>
-                        <input type="email" id="email" name="email" placeholder="Enter email..." autocomplete="off" >
+                        <input type="email" id="email" name="email" placeholder="Enter email..."  >
                         <label for="username">Username:</label>
-                        <input type="text" id="username" name="username" placeholder="Enter Username..." autocomplete="off">
+                        <input type="text" id="username" name="username" placeholder="Enter Username...">
                         <label for="password">Password:</label>
-                        <input type="password" id="password" name="password" placeholder="Enter Password..." autocomplete="off">
+                        <input type="password" id="password" name="password" placeholder="Enter Password..." >
                   </div>
                   <div class="signup-button">
                         <button type="submit" name="register">
